@@ -21,61 +21,69 @@ def menulogin():  # esta funcion me permite ver el menu principal
 
 
 def menu_primary():
-    print("")
+    print("___---Menu Principal---___")
     while True:
         option_menu = int(input(""
-                                "1 - \n"
-                                "2 - \n"
-                                "3 - \n"
-                                "4 - \n"
-                                "5 - \n"
-                                "6 - \n"
-                                "7 - Salir\n"
+                                "1 - REALIZAR UNA VENTA\n"
+                                "2 - CLIENTES\n"
+                                "3 - ALMACEN\n"
+                                "4 - BOLETAS\n"
+                                "5 - Salir\n"
                                 "Seleccione: "))
-        if option_menu == '1':
-            print("")
-        elif option_menu == '2':
-            print("")
-        elif option_menu == '3':
-            print("")
-        elif option_menu == '4':
-            print("")
-        elif option_menu == '5':
-            print("")
-        elif option_menu == '6':
-            print("")
-        elif option_menu == '7':
-            if input("Seguro (s/n): ") == "s":
+        if option_menu == 1:
+            print("ventas!!")
+            menu_ventas()
+        elif option_menu == 2:
+            print("CLIENTES!!")
+        elif option_menu == 3:
+            menu_almacen()
+        elif option_menu == 4:
+            print("BOLETAS!!")
+        elif option_menu == 5:
+            salir = str(input("Seguro (s/n): "))
+            if salir == 's':
                 break
+            else:
+                continue
+        else:
+            continue
+
+
+def menu_ventas():
+    print("")
 
 
 def menu_almacen():
     print("___--Menu Almacen--___")
     while True:
-        option_menu = int(input(""
-                                "1 - Registrar un Producto nuevo\n"
-                                "2 - Buscar Producto\n"
-                                "3 - Modificar Producto\n"
-                                "4 - Mostrar información Almacen\n"
-                                "5 - Borrar un Producto\n"
-                                "6 - Borrar todos los artículos\n"
-                                "7 - Salir\n"
-                                "Seleccione: "))
-        if option_menu == '1':
-            print("")
-        elif option_menu == '2':
-            print("")
-        elif option_menu == '3':
-            print("")
-        elif option_menu == '4':
-            print("")
-        elif option_menu == '5':
-            print("")
-        elif option_menu == '6':
-            print("")
-        elif option_menu == '7':
+        option_menu = input(""
+                            "1 - Registrar un Producto nuevo\n"
+                            "2 - Buscar Producto\n"
+                            "3 - Modificar Producto\n"
+                            "4 - Mostrar información Almacen\n"
+                            "5 - Borrar un Producto\n"
+                            "6 - Borrar todos los artículos\n"
+                            "7 - Salir\n"
+                            "Seleccione: ")
+        if option_menu == 1:
+            print("Producto Registrado Exitosamente")
+        elif option_menu == 2:
+            print("Busqueda No encontrado")
+        elif option_menu == 3:
+            print("Producto Modificado Exitosamente")
+        elif option_menu == 4:
+            print("INFO Almacen")
+        elif option_menu == 5:
+            print("Producto borrado")
+        elif option_menu == 6:
+            print("Productos borrados Exitosamente")
+        elif option_menu == 7:
             if input("Seguro (s/n): ") == "s":
                 break
+            else:
+                continue
+        else:
+            continue
 
 
 def systema(x):
