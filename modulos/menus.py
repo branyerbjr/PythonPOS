@@ -1,5 +1,6 @@
 import getpass as pssd
 import os
+from modulos import clientes, alamacen
 
 
 def menulogin():  # esta funcion me permite ver el menu principal
@@ -50,7 +51,14 @@ def menu_primary():
 
 
 def menu_ventas():
-    print("")
+    print("___--Menu VENTAS--___")
+    while True:
+        print("")
+
+
+def menu_clientes():
+    print("___--Menu Clientes--___")
+    clientes.init_cliente()
 
 
 def menu_almacen():

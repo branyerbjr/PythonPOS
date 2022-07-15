@@ -23,7 +23,7 @@ def boleta_venta():
           f"| AREQUIPA, PE, 04001                                   |\n"
           f"|                                                       |")
     print("| +------------------+----------+----------+----------+ |")
-    print("| |NOMBRE            |CANT.     |PRECIO    |IMPORTE   | |")
+    print("| |PRODUCTO          |CANT.     |PRECIO    |IMPORTE   | |")
     print("| +------------------+----------+----------+----------+ |")
     for i in range(3):
         print("| |{:<18}|{:>8}  |{:>10.2f}|{:>10.2f}| |".format(
@@ -33,6 +33,7 @@ def boleta_venta():
     print("|                               +----------+----------+ |\n"
           "|             GRACIAS POR SU PREFERENCIA                |"
           "\n+-------------------------------------------------------+")
+
 
 
 boleta_venta()
