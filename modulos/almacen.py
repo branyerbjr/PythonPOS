@@ -4,7 +4,7 @@ Stocks = [5, 20]
 Precios = [23, 80]
 
 
-def Selector_Productos():
+def Selector_Productos():  # EXPORTAMOS UNA LISTA DE LA SELECCION DE PRODUCTOS
     compras = []
     while True:
         compra = []

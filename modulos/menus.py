@@ -21,7 +21,7 @@ def menulogin(u):  # Funcion DE INICIO DE SESION
     menu_primary()
 
 
-def menu_primary():
+def menu_primary():  # Funcion INICIAL
     systema('borrar')
     print("___---Menu Principal---___")
     while True:

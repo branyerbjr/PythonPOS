@@ -1,7 +1,7 @@
 dic_clientes = {76233122: ['Kathy Quispe', '-----NO----'], 76233123: ['Branyer Romero', '12365478251'], 76233173: ['Anyelina Sosa', '12365478257']}
 
 
-def Select_cliente():
+def Select_cliente():  # en esta funcion exportamos una lista con el cliente seleccionado
     export_client = []
     while True:
         keys = []
@@ -43,7 +43,7 @@ def Select_cliente():
     return export_client
 
 
-def init_cliente():
+def init_cliente():  # en esta funcion esta el menu cliente
     while True:
         keys = []
         k = 0
@@ -81,7 +81,7 @@ def init_cliente():
             break
 
 
-def agregar_cliente():
+def agregar_cliente():  # funcion de agragar cliente
     while True:
         dni = int(input("Ingrese su DNI: "))
         nombre = input("Ingrese su nombre: ")
@@ -97,7 +97,7 @@ def agregar_cliente():
             continue
 
 
-def modificar_cliente(dni):
+def modificar_cliente(dni):  # funcio de modificador del cliente
     nombre = str(input("Modificar Nombre: "))
     option_ruc = str(input("Tiene RUC (s/n): "))
     if option_ruc == 's':
