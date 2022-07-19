@@ -1,1 +1,5 @@
 # PythonPOS
+
+* **Branyer**
+* **Kathy**
+* **Anyelina**

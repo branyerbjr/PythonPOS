@@ -1,17 +1,17 @@
 import getpass as pssd
 import os
-from modulos import clientes, alamacen
+from modulos import clientes, almacen, boletas
 
 
-def menulogin():  # esta funcion me permite ver el menu principal
+def menulogin(u):  # Funcion DE INICIO DE SESION
     print("**------WELCOME SYSTEM POS------**")
     while True:
         user = str(input(" *---INICIAR SESION---*\n"
                          "usuario: "))
-        if user == "admin":
+        if user == u[0]:
             while True:
                 pasword = pssd.getpass('password: ')
-                if pasword == '12345':
+                if pasword == u[1]:
                     print("***SESION INICIADA.....***")
                     break
             break
@@ -22,9 +22,10 @@ def menulogin():  # esta funcion me permite ver el menu principal
 
 
 def menu_primary():
+    systema('borrar')
     print("___---Menu Principal---___")
     while True:
-        option_menu = int(input(""
+        option_menu = int(input("¿Que desea Realizar?\n"
                                 "1 - REALIZAR UNA VENTA\n"
                                 "2 - CLIENTES\n"
                                 "3 - ALMACEN\n"
@@ -32,14 +33,16 @@ def menu_primary():
                                 "5 - Salir\n"
                                 "Seleccione: "))
         if option_menu == 1:
-            print("ventas!!")
+            systema('borrar')
             menu_ventas()
         elif option_menu == 2:
-            print("CLIENTES!!")
+            systema('borrar')
+            menu_clientes()
         elif option_menu == 3:
+            systema('borrar')
             menu_almacen()
         elif option_menu == 4:
-            print("BOLETAS!!")
+            systema('borrar')
         elif option_menu == 5:
             salir = str(input("Seguro (s/n): "))
             if salir == 's':
@@ -51,47 +54,43 @@ def menu_primary():
 
 
 def menu_ventas():
-    print("___--Menu VENTAS--___")
+    systema('borrar')
     while True:
-        print("")
+        print("___--SYSTEM POS--___")
+        boletas.boleta_venta(
+            almacen.Selector_Productos(),
+            clientes.Select_cliente())
+        if str(input("¿Desea Regresar Menu principal? (s/n): ")) == 's':
+            break
+        else:
+            continue
+    menu_primary()
 
 
 def menu_clientes():
-    print("___--Menu Clientes--___")
-    clientes.init_cliente()
+    systema('borrar')
+    while True:
+        print("___--Menu Clientes--___")
+        clientes.init_cliente()
+        if str(input("¿Desea Regresar Menu principal? (s/n): ")) == 's':
+            break
+        else:
+            continue
+    menu_primary()
 
 
 def menu_almacen():
+    systema('borrar')
     print("___--Menu Almacen--___")
-    while True:
-        option_menu = input(""
-                            "1 - Registrar un Producto nuevo\n"
-                            "2 - Buscar Producto\n"
-                            "3 - Modificar Producto\n"
-                            "4 - Mostrar información Almacen\n"
-                            "5 - Borrar un Producto\n"
-                            "6 - Borrar todos los artículos\n"
-                            "7 - Salir\n"
-                            "Seleccione: ")
-        if option_menu == 1:
-            print("Producto Registrado Exitosamente")
-        elif option_menu == 2:
-            print("Busqueda No encontrado")
-        elif option_menu == 3:
-            print("Producto Modificado Exitosamente")
-        elif option_menu == 4:
-            print("INFO Almacen")
-        elif option_menu == 5:
-            print("Producto borrado")
-        elif option_menu == 6:
-            print("Productos borrados Exitosamente")
-        elif option_menu == 7:
-            if input("Seguro (s/n): ") == "s":
-                break
-            else:
-                continue
-        else:
-            continue
+    almacen.ini_Productos()
+    menu_primary()
+
+
+def menu_boletas():
+    if str(input("Desea ver Facturas(s/n)")) == 's':
+        boletas.Ver_boletas()
+    else:
+        menu_primary()
 
 
 def systema(x):

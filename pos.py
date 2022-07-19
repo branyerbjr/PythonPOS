@@ -1,3 +1,5 @@
 from modulos.menus import *
 
-menulogin()
+usuario = ("admin", '1234567')
+
+menulogin(usuario)
