@@ -1,7 +1,7 @@
-Lista_Productos = ["", "arror"]
+Lista_Productos = ["Polo-coreano", "zapatos-mujer"]
 Codigo_Product = ["#1234567", "#7654321"]
-Stocks = [5, 10]
-Precios = [12, 8]
+Stocks = [5, 20]
+Precios = [23, 80]
 
 
 def Selector_Productos():

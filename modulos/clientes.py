@@ -1,4 +1,4 @@
-dic_clientes = {76233122: ['Jose Rodrigues', '-----NO----'], 76233123: ['Jose Rodrigues', '12365478251']}
+dic_clientes = {76233122: ['Kathy Quispe', '-----NO----'], 76233123: ['Branyer Romero', '12365478251'], 76233173: ['Anyelina Sosa', '12365478257']}
 
 
 def Select_cliente():
