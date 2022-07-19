@@ -9,6 +9,6 @@
 ```
 
 ## Autores ✒️
-* **Branyer**
+* **Branyer R**
 * **Kathy**
 * **Anyelina**
