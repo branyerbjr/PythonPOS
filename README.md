@@ -1,7 +1,12 @@
 # PythonPOS
 
+### Pre-requisitos 📋
+* python3
+
 ### Como desplegar el programa 🚀
-´python pos.py´
+```
+ python3 pos.py
+```
 
 ## Autores ✒️
 * **Branyer**
